@@ -73,6 +73,14 @@ export default function HeroSection() {
             <a href="#contact" className="button-secondary">
               Fale comigo
             </a>
+            <a
+              href={`${import.meta.env.BASE_URL}curriculo-athirson-silva.pdf`}
+              target="_blank"
+              rel="noreferrer"
+              className="button-secondary"
+            >
+              Baixar curriculo
+            </a>
           </motion.div>
         </motion.div>
       </div>
