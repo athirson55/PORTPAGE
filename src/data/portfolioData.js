@@ -9,6 +9,16 @@ export const skills = [
   "Git",
 ];
 
+export const education = [
+  {
+    course: "Analise e Desenvolvimento de Sistemas",
+    institution: "Centro Universitario Paraiso - UniFAP",
+    startDate: "04/2025",
+    endDate: "06/2027",
+    status: "Em andamento",
+  },
+];
+
 export const projects = [
   {
     title: "Projeto DNS",

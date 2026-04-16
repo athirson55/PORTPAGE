@@ -1,5 +1,6 @@
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
+import EducationSection from "./components/EducationSection";
 import ProjectsSection from "./components/ProjectsSection";
 import TechnologiesSection from "./components/TechnologiesSection";
 import ContactSection from "./components/ContactSection";
@@ -14,6 +15,7 @@ function App() {
       <div className="content-wrap container mx-auto px-4 sm:px-6 lg:px-8">
         <HeroSection />
         <AboutSection />
+        <EducationSection />
         <ProjectsSection />
         <TechnologiesSection />
         <ContactSection />
