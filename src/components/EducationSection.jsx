@@ -39,6 +39,9 @@ export default function EducationSection() {
                   <p className="mt-1 text-sm text-slate-300">
                     {edu.institution}
                   </p>
+                  <p className="mt-2 text-xs font-medium text-slate-400">
+                    {edu.semester}
+                  </p>
                 </div>
                 <span className="inline-flex items-center rounded-full border border-white/12 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-slate-300">
                   {edu.status}

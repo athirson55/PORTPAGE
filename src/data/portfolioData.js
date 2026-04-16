@@ -15,6 +15,7 @@ export const education = [
     institution: "Centro Universitario Paraiso - UniFAP",
     startDate: "04/2025",
     endDate: "06/2027",
+    semester: "3º Semestre",
     status: "Em andamento",
   },
 ];
