@@ -8,7 +8,7 @@ const fadeInUp = {
 export default function HeroSection() {
   return (
     <section
-      className="section-block home-no-photo relative flex min-h-screen items-start pt-16 sm:pt-24 lg:pt-28 pb-14 sm:pb-18 lg:pb-20"
+      className="section-block home-no-photo relative flex min-h-[74vh] items-start pt-16 pb-8 sm:min-h-[84vh] sm:pt-24 sm:pb-14 lg:min-h-screen lg:pt-28 lg:pb-20"
       id="home"
     >
       <div className="home-spot home-spot-a" aria-hidden="true" />

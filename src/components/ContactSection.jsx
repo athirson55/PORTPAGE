@@ -71,11 +71,6 @@ export default function ContactSection() {
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      <div
-        className="pointer-events-none mb-10 h-px bg-gradient-to-r from-transparent via-white/18 to-transparent sm:mb-12"
-        aria-hidden="true"
-      />
-
       <SectionTitle
         eyebrow="Contato"
         title="Vamos construir algo incrível"
