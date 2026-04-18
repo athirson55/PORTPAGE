@@ -40,7 +40,7 @@ export default function EducationSection() {
             <div className="pointer-events-none absolute -right-24 -top-24 h-52 w-52 rounded-full bg-white/5 blur-3xl" />
 
             <div className="relative z-10">
-              <div className="flex items-start justify-between gap-4">
+              <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                 <div className="flex-1">
                   <h3 className="font-display text-lg font-semibold tracking-[-0.02em] text-white">
                     {edu.course}

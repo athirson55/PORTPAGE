@@ -91,7 +91,7 @@ export default function Header() {
           aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((prev) => !prev)}
-          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-slate-900/45 text-slate-100 transition-colors duration-300 hover:border-white/30 hover:bg-slate-800/65 lg:hidden"
+          className="inline-flex h-9 w-9 touch-manipulation items-center justify-center rounded-md border border-white/15 bg-slate-900/45 text-slate-100 transition-colors duration-300 hover:border-white/30 hover:bg-slate-800/65 lg:hidden"
         >
           {mobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -104,21 +104,16 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.22, ease: "easeOut" }}
-            className="mx-auto mb-2 w-full max-w-[1180px] rounded-xl border border-white/12 bg-slate-950/72 p-3 shadow-[0_10px_26px_rgba(2,6,23,0.48)] backdrop-blur-xl lg:hidden"
+            className="pointer-events-auto mx-auto mb-2 w-full max-w-[1180px] rounded-xl border border-white/12 bg-slate-950/72 p-3 shadow-[0_10px_26px_rgba(2,6,23,0.48)] backdrop-blur-xl lg:hidden"
           >
             <nav className="flex flex-col gap-1">
               {navItems.map((item) => {
-                const isActive = activeSection === item.id;
                 return (
                   <a
                     key={item.id}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`rounded-lg px-3 py-2.5 text-sm font-medium transition-colors duration-300 ${
-                      isActive
-                        ? "bg-white/12 text-white"
-                        : "text-slate-200 hover:bg-white/7"
-                    }`}
+                    className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-200 transition-colors duration-300 hover:bg-white/7"
                   >
                     {item.label}
                   </a>

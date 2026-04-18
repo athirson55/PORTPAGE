@@ -7,16 +7,16 @@ export default function SectionTitle({ eyebrow, title, subtitle }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="mb-12 max-w-4xl sm:mb-14 lg:mb-16"
+      className="section-title-block mb-10 max-w-4xl sm:mb-14 lg:mb-16"
     >
-      <span className="mb-4 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-300/90">
+      <span className="section-title-eyebrow mb-3 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-300/90 sm:mb-4 sm:px-3.5 sm:text-[11px] sm:tracking-[0.24em]">
         {eyebrow}
       </span>
-      <h2 className="font-display text-3xl font-semibold leading-[1.07] tracking-[-0.025em] text-white sm:text-4xl lg:text-[2.7rem]">
+      <h2 className="section-title-heading font-display text-[1.85rem] font-semibold leading-[1.09] tracking-[-0.023em] text-white sm:text-4xl sm:leading-[1.07] lg:text-[2.7rem]">
         {title}
       </h2>
       {subtitle ? (
-        <p className="mt-4 max-w-2xl text-base leading-[1.82] tracking-[0.005em] text-slate-300/92 sm:text-lg">
+        <p className="section-title-subtitle mt-3 max-w-2xl text-[0.98rem] leading-[1.72] tracking-[0.005em] text-slate-300/92 sm:mt-4 sm:text-lg sm:leading-[1.82]">
           {subtitle}
         </p>
       ) : null}

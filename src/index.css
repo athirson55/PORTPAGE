@@ -40,7 +40,8 @@ body {
       transparent 30%
     ),
     radial-gradient(
-      line-height: 1.72; rgba(148, 163, 184, 0.06),
+      circle at 82% 12%,
+      rgba(148, 163, 184, 0.06),
       transparent 38%
     ),
     linear-gradient(180deg, #07080d 0%, #0a0d14 60%, #090c12 100%);
@@ -146,7 +147,7 @@ section[id] {
 }
 
 .site-header {
-  pointer-events: none;
+  pointer-events: auto;
   background: linear-gradient(
     180deg,
     rgba(8, 10, 14, 0.76) 0%,
@@ -154,10 +155,6 @@ section[id] {
     transparent 100%
   );
   backdrop-filter: blur(8px);
-}
-
-.site-header-inner {
-  pointer-events: auto;
 }
 
 .nav-link {
@@ -459,5 +456,130 @@ section[id] {
 
   section[id] {
     scroll-margin-top: 84px;
+  }
+}
+
+@media (max-width: 390px) {
+  .content-wrap {
+    padding-inline: 1rem;
+  }
+
+  .home-outline {
+    display: none;
+  }
+
+  .home-no-photo {
+    min-height: auto;
+    padding-top: 3.75rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-content {
+    row-gap: 1.6rem;
+  }
+
+  .hero-title {
+    font-size: 1.95rem;
+    line-height: 1.06;
+    letter-spacing: -0.024em;
+  }
+
+  .hero-subtitle {
+    font-size: 0.97rem;
+    line-height: 1.45;
+  }
+
+  .hero-copy {
+    font-size: 0.95rem;
+    line-height: 1.68;
+  }
+
+  .hero-actions {
+    gap: 0.55rem;
+  }
+
+  .section-title-block {
+    margin-bottom: 2.1rem;
+  }
+
+  .section-title-heading {
+    font-size: 1.76rem;
+    line-height: 1.11;
+  }
+
+  .section-title-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.68;
+  }
+
+  .button-primary,
+  .button-secondary {
+    width: 100%;
+    padding: 0.72rem 1rem;
+    font-size: 0.88rem;
+    letter-spacing: 0.015em;
+  }
+}
+
+@media (max-width: 360px) {
+  .content-wrap {
+    padding-inline: 0.9rem;
+  }
+
+  .home-no-photo {
+    padding-top: 3.5rem;
+  }
+
+  .hero-kicker {
+    letter-spacing: 0.2em;
+  }
+
+  .hero-title {
+    font-size: 1.82rem;
+    line-height: 1.07;
+  }
+
+  .hero-copy {
+    font-size: 0.92rem;
+  }
+
+  .button-primary,
+  .button-secondary {
+    padding: 0.68rem 0.95rem;
+    font-size: 0.85rem;
+  }
+
+  .section-title-heading {
+    font-size: 1.64rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .content-wrap {
+    padding-inline: 0.82rem;
+  }
+
+  .home-no-photo {
+    padding-top: 3.25rem;
+  }
+
+  .hero-title {
+    font-size: 1.68rem;
+    line-height: 1.08;
+  }
+
+  .hero-subtitle,
+  .hero-copy {
+    font-size: 0.9rem;
+  }
+
+  .section-title-heading {
+    font-size: 1.5rem;
+    line-height: 1.12;
+  }
+
+  .section-title-eyebrow {
+    padding-inline: 0.7rem;
+    letter-spacing: 0.18em;
   }
 }

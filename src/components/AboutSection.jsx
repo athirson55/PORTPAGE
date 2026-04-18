@@ -4,17 +4,16 @@ import { skills } from "../data/portfolioData";
 import { skillIcons } from "../data/skillIcons";
 
 const skillDetails = {
-  HTML: { level: "Base sólida", note: "Estrutura semântica e acessível" },
-  CSS: { level: "Base sólida", note: "Layout responsivo e refinamento visual" },
+  HTML: { note: "Estrutura semântica e acessível" },
+  CSS: { note: "Layout responsivo e refinamento visual" },
   JavaScript: {
-    level: "Foco atual",
     note: "Lógica, interatividade e manipulação de estado",
   },
-  React: { level: "Foco atual", note: "Componentização e fluxo de interface" },
-  "Node.js": { level: "Em evolução", note: "Rotas, APIs e serviços backend" },
-  Python: { level: "Em evolução", note: "Automação e fundamentos de backend" },
-  C: { level: "Fundamentos", note: "Base de lógica e estrutura de dados" },
-  Git: { level: "Uso diário", note: "Versionamento e fluxo de colaboração" },
+  React: { note: "Componentização e fluxo de interface" },
+  "Node.js": { note: "Rotas, APIs e serviços backend" },
+  Python: { note: "Automação e fundamentos de backend" },
+  C: { note: "Base de lógica e estrutura de dados" },
+  Git: { note: "Versionamento e fluxo de colaboração" },
 };
 
 export default function AboutSection() {
@@ -43,7 +42,6 @@ export default function AboutSection() {
         {skills.map((skill) => {
           const Icon = skillIcons[skill];
           const detail = skillDetails[skill] ?? {
-            level: "Em estudo",
             note: "Evolução contínua",
           };
 
@@ -62,14 +60,9 @@ export default function AboutSection() {
                 <Icon size={18} />
               </span>
               <div className="min-w-0">
-                <div className="flex items-center gap-2">
-                  <h3 className="truncate text-sm font-semibold tracking-[0.01em] text-slate-100">
-                    {skill}
-                  </h3>
-                  <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.08em] text-slate-300">
-                    {detail.level}
-                  </span>
-                </div>
+                <h3 className="truncate text-sm font-semibold tracking-[0.01em] text-slate-100">
+                  {skill}
+                </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-400">
                   {detail.note}
                 </p>
