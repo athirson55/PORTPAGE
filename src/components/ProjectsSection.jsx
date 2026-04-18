@@ -5,11 +5,18 @@ import { projects } from "../data/portfolioData";
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="section-block py-20 sm:py-24">
+    <motion.section
+      id="projects"
+      className="section-block py-24 sm:py-28 lg:py-32"
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.12 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       <SectionTitle
         eyebrow="Projetos"
         title="Projetos em destaque"
-        subtitle="Uma selecao de projetos com foco em resolucao pratica de problemas, pensamento sistemico e implementacao de software."
+        subtitle="Uma seleção de projetos com foco em resolução prática de problemas, pensamento sistêmico e implementação de software."
       />
 
       <motion.div
@@ -17,7 +24,7 @@ export default function ProjectsSection() {
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
         transition={{ staggerChildren: 0.12 }}
-        className="grid gap-5 md:grid-cols-2 lg:gap-6"
+        className="grid gap-6 md:grid-cols-2 lg:gap-7"
       >
         {projects.map((project) => (
           <motion.article
@@ -26,6 +33,8 @@ export default function ProjectsSection() {
               hidden: { opacity: 0, y: 24 },
               show: { opacity: 1, y: 0 },
             }}
+            whileHover={{ y: -5, scale: 1.01 }}
+            transition={{ type: "spring", stiffness: 220, damping: 22 }}
             className="glass-card project-card group relative flex min-h-[250px] flex-col justify-between overflow-hidden rounded-[1.5rem] border border-white/10 p-6 shadow-[0_8px_26px_rgba(0,0,0,0.22)]"
           >
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-50" />
@@ -61,6 +70,6 @@ export default function ProjectsSection() {
           </motion.article>
         ))}
       </motion.div>
-    </section>
+    </motion.section>
   );
 }

@@ -12,7 +12,7 @@ function App() {
     <main className="page-shell relative overflow-hidden text-slate-100">
       <div className="hero-gradient pointer-events-none" />
       <Header />
-      <div className="content-wrap container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="content-wrap container mx-auto px-5 sm:px-8 lg:px-10">
         <HeroSection />
         <AboutSection />
         <EducationSection />

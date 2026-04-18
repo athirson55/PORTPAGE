@@ -15,6 +15,7 @@
   --line: rgba(148, 163, 184, 0.14);
   --text: #eef2f7;
   --muted: #99a4b4;
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {
@@ -29,6 +30,9 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--font-display);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   background:
     radial-gradient(
       circle at 14% 6%,
@@ -36,13 +40,12 @@ body {
       transparent 30%
     ),
     radial-gradient(
-      circle at 84% 86%,
-      rgba(148, 163, 184, 0.06),
+      line-height: 1.72; rgba(148, 163, 184, 0.06),
       transparent 38%
     ),
     linear-gradient(180deg, #07080d 0%, #0a0d14 60%, #090c12 100%);
   color: var(--text);
-  line-height: 1.58;
+  line-height: 1.65;
   overflow-x: hidden;
 }
 
@@ -79,7 +82,7 @@ body {
 }
 
 .content-wrap {
-  max-width: 1140px;
+  max-width: 1200px;
 }
 
 .home-no-photo {
@@ -159,7 +162,7 @@ section[id] {
 
 .nav-link {
   position: relative;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
 }
 
 .nav-link::after {
@@ -201,7 +204,7 @@ section[id] {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(148, 163, 184, 0.18),
+    rgba(148, 163, 184, 0.12),
     transparent
   );
 }
@@ -267,13 +270,13 @@ section[id] {
   padding: 0.78rem 1.2rem;
   font-size: 0.93rem;
   font-weight: 600;
-  letter-spacing: 0.012em;
+  letter-spacing: 0.02em;
   transition:
-    transform 0.22s ease,
-    background 0.22s ease,
-    color 0.22s ease,
-    border-color 0.22s ease,
-    box-shadow 0.22s ease;
+    transform 0.28s var(--ease-smooth),
+    background 0.28s var(--ease-smooth),
+    color 0.28s var(--ease-smooth),
+    border-color 0.28s var(--ease-smooth),
+    box-shadow 0.28s var(--ease-smooth);
 }
 
 .button-primary {
@@ -311,7 +314,7 @@ section[id] {
 }
 
 .project-cta svg {
-  transition: transform 0.22s ease;
+  transition: transform 0.28s var(--ease-smooth);
 }
 
 .project-cta:hover svg {
@@ -320,9 +323,10 @@ section[id] {
 
 .tech-pill {
   transition:
-    transform 0.22s ease,
-    background 0.22s ease,
-    border-color 0.22s ease;
+    transform 0.28s var(--ease-smooth),
+    background 0.28s var(--ease-smooth),
+    border-color 0.28s var(--ease-smooth),
+    box-shadow 0.28s var(--ease-smooth);
 }
 
 .tech-pill:hover {
@@ -331,20 +335,22 @@ section[id] {
 
 .input-surface {
   transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
+    border-color 0.28s var(--ease-smooth),
+    box-shadow 0.28s var(--ease-smooth),
+    background 0.28s var(--ease-smooth);
 }
 
 .social-link {
   transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
+    transform 0.28s var(--ease-smooth),
+    border-color 0.28s var(--ease-smooth),
+    background 0.28s var(--ease-smooth),
+    box-shadow 0.28s var(--ease-smooth);
 }
 
 .social-link:hover {
   transform: translateX(2px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
 }
 
 .footer-shell {
@@ -423,7 +429,7 @@ section[id] {
     top: 16%;
     left: 2%;
     gap: 0.7rem;
-    opacity: 0.14;
+    opacity: 0.1;
   }
 
   .home-spot-a {

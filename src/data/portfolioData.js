@@ -9,10 +9,17 @@ export const skills = [
   "Git",
 ];
 
+export const technologiesByCategory = {
+  "Front-end": ["HTML", "CSS", "JavaScript", "React"],
+  "Back-end": ["Node.js", "Python", "PHP", "C"],
+  Design: ["UX/UI Design", "Figma"],
+  Ferramentas: ["Git"],
+};
+
 export const education = [
   {
-    course: "Analise e Desenvolvimento de Sistemas",
-    institution: "Centro Universitario Paraiso - UniFAP",
+    course: "Análise e Desenvolvimento de Sistemas",
+    institution: "Centro Universitário Paraíso - UniFAP",
     startDate: "04/2025",
     endDate: "06/2027",
     semester: "3º Semestre",
@@ -23,26 +30,26 @@ export const education = [
 export const projects = [
   {
     title: "Projeto DNS",
-    description: "Configuracao e implementacao de DNS com site publicado.",
+    description: "Configuração e implementação de DNS com site publicado.",
     link: "https://redestde3.netlify.app",
     buttonLabel: "Ver projeto",
   },
   {
     title: "Projeto Integrador",
     description:
-      "Planejamento completo do sistema, analise de requisitos e implementacao.",
+      "Planejamento completo do sistema, análise de requisitos e implementação.",
     link: "#",
     buttonLabel: "GitHub",
   },
   {
     title: "Calculadora em C",
-    description: "Calculadora em terminal usando logica de programacao.",
+    description: "Calculadora em terminal usando lógica de programação.",
     link: "#",
     buttonLabel: "GitHub",
   },
   {
     title: "Sistema Web",
-    description: "Sistema CRUD basico com frontend e backend.",
+    description: "Sistema CRUD básico com frontend e backend.",
     link: "#",
     buttonLabel: "GitHub",
   },

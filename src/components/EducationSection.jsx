@@ -4,7 +4,14 @@ import { education } from "../data/portfolioData";
 
 export default function EducationSection() {
   return (
-    <section id="education" className="section-block py-20 sm:py-24">
+    <motion.section
+      id="education"
+      className="section-block py-24 sm:py-28 lg:py-32"
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       <SectionTitle
         eyebrow="Formação"
         title="Educação e Aprendizado"
@@ -16,7 +23,7 @@ export default function EducationSection() {
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
         transition={{ staggerChildren: 0.12 }}
-        className="space-y-4"
+        className="space-y-5"
       >
         {education.map((edu, index) => (
           <motion.article
@@ -25,6 +32,8 @@ export default function EducationSection() {
               hidden: { opacity: 0, y: 24 },
               show: { opacity: 1, y: 0 },
             }}
+            whileHover={{ y: -4, scale: 1.01 }}
+            transition={{ type: "spring", stiffness: 230, damping: 22 }}
             className="glass-card relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-white/10 p-6 shadow-[0_8px_26px_rgba(0,0,0,0.22)] sm:p-7"
           >
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-50" />
@@ -61,9 +70,10 @@ export default function EducationSection() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
+        whileHover={{ y: -2 }}
         viewport={{ once: true, amount: 0.35 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-        className="mt-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 text-center sm:p-8"
+        className="mt-10 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-7 text-center sm:p-9"
       >
         <p className="text-sm leading-relaxed text-slate-300">
           🎯{" "}
@@ -76,6 +86,6 @@ export default function EducationSection() {
           profissionalmente.
         </p>
       </motion.div>
-    </section>
+    </motion.section>
   );
 }

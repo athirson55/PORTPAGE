@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 const navItems = [
-  { label: "Inicio", href: "#home", id: "home" },
+  { label: "Início", href: "#home", id: "home" },
   { label: "Sobre", href: "#about", id: "about" },
   { label: "Formação", href: "#education", id: "education" },
   { label: "Projetos", href: "#projects", id: "projects" },
@@ -62,7 +62,7 @@ export default function Header() {
       <div className="site-header-inner mx-auto flex w-full max-w-[1180px] items-center justify-between py-6 lg:py-7">
         <a
           href="#home"
-          className="font-display text-[1.1rem] font-semibold tracking-[0.01em] text-slate-100 transition-colors duration-300 hover:text-white"
+          className="font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-slate-100 transition-colors duration-300 hover:text-white"
         >
           Athirson Silva
         </a>

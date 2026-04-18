@@ -9,8 +9,8 @@ export default function Footer() {
         <h3 className="font-display text-xl font-semibold text-white sm:text-2xl">
           Athirson Silva
         </h3>
-        <p className="mx-auto mt-2 max-w-xl text-sm text-slate-300/85">
-          Desenvolvido com cuidado para um portfolio de desenvolvedor moderno e
+        <p className="mx-auto mt-3 max-w-lg text-sm leading-[1.75] text-slate-300/85">
+          Desenvolvido com cuidado para um portfólio de desenvolvedor moderno e
           de alta performance.
         </p>
 
