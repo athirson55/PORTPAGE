@@ -26,7 +26,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="show"
           transition={{ staggerChildren: 0.15, delayChildren: 0.2 }}
-          className="hero-content relative z-10 mx-auto max-w-4xl space-y-8 text-center sm:text-left"
+          className="hero-content relative z-10 mx-auto max-w-4xl space-y-8 text-center sm:mx-0 sm:text-left"
         >
           <motion.p
             variants={fadeInUp}

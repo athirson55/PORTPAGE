@@ -7,7 +7,7 @@ export default function SectionTitle({ eyebrow, title, subtitle }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="section-title-block mx-auto mb-10 max-w-4xl text-center sm:mb-14 sm:text-left lg:mb-16"
+      className="section-title-block mx-auto mb-10 max-w-4xl text-center sm:mx-0 sm:mb-14 sm:text-left lg:mb-16"
     >
       <span className="section-title-eyebrow mb-3 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-300/90 sm:mb-4 sm:px-3.5 sm:text-[11px] sm:tracking-[0.24em]">
         {eyebrow}
