@@ -41,7 +41,7 @@ export default function ProjectsSection() {
             <div className="pointer-events-none absolute -right-24 -top-24 h-52 w-52 rounded-full bg-white/5 blur-3xl transition-all duration-500 group-hover:bg-white/8" />
 
             <div className="relative z-10 space-y-4">
-              <div className="flex items-center justify-between gap-4">
+              <div className="project-meta flex items-center justify-between gap-4">
                 <span className="inline-flex items-center rounded-full border border-white/12 bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.16em] text-slate-300">
                   Projeto
                 </span>

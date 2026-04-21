@@ -88,7 +88,7 @@ export default function ContactSection() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           onSubmit={handleSubmit}
-          className="glass-card space-y-4 rounded-2xl border border-white/10 p-6 shadow-[0_8px_26px_rgba(0,0,0,0.22)] sm:p-7"
+          className="glass-card contact-form-card space-y-4 rounded-2xl border border-white/10 p-6 shadow-[0_8px_26px_rgba(0,0,0,0.22)] sm:p-7"
         >
           <label className="block text-sm font-medium text-slate-300">
             Nome
@@ -157,7 +157,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
-          className="glass-card rounded-2xl border border-white/10 p-6 shadow-[0_8px_26px_rgba(0,0,0,0.22)] sm:p-7"
+          className="glass-card contact-social-card rounded-2xl border border-white/10 p-6 shadow-[0_8px_26px_rgba(0,0,0,0.22)] sm:p-7"
         >
           <h3 className="font-display text-lg font-semibold tracking-[-0.02em] text-white">
             Redes sociais

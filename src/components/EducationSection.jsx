@@ -40,7 +40,7 @@ export default function EducationSection() {
             <div className="pointer-events-none absolute -right-24 -top-24 h-52 w-52 rounded-full bg-white/5 blur-3xl" />
 
             <div className="relative z-10">
-              <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+              <div className="education-card-top flex flex-col items-start gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                 <div className="flex-1">
                   <h3 className="font-display text-lg font-semibold tracking-[-0.02em] text-white">
                     {edu.course}
@@ -57,7 +57,7 @@ export default function EducationSection() {
                 </span>
               </div>
 
-              <div className="mt-4 flex items-center gap-2 text-xs text-slate-400">
+              <div className="education-card-date mt-4 flex items-center gap-2 text-xs text-slate-400">
                 <span className="font-mono">{edu.startDate}</span>
                 <span>—</span>
                 <span className="font-mono">{edu.endDate}</span>

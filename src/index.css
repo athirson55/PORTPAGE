@@ -422,6 +422,108 @@ section[id] {
 }
 
 @media (max-width: 768px) {
+  #about,
+  #education,
+  #projects,
+  #technologies,
+  #contact {
+    text-align: center;
+  }
+
+  .content-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-wrap > section {
+    width: 100%;
+  }
+
+  .hero-content {
+    margin-inline: auto;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-title,
+  .hero-copy {
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .section-title-block {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .section-title-subtitle {
+    margin-inline: auto;
+  }
+
+  .skill-card {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .skill-card .min-w-0 {
+    width: 100%;
+  }
+
+  .skill-card h3 {
+    white-space: normal;
+  }
+
+  .project-card {
+    text-align: center;
+  }
+
+  .project-card .project-meta {
+    justify-content: center;
+    gap: 0.7rem;
+  }
+
+  .project-card p {
+    margin-inline: auto;
+  }
+
+  .project-cta {
+    margin-inline: auto;
+  }
+
+  .tech-category-card {
+    text-align: center;
+  }
+
+  .tech-category-pills {
+    justify-content: center;
+  }
+
+  .education-card-top {
+    align-items: center;
+    text-align: center;
+  }
+
+  .education-card-date {
+    justify-content: center;
+  }
+
+  .contact-social-card {
+    text-align: center;
+  }
+
+  .contact-social-card .social-link {
+    justify-content: center;
+  }
+
+  .contact-form-card {
+    text-align: left;
+  }
+
   .home-outline {
     top: 16%;
     left: 2%;
