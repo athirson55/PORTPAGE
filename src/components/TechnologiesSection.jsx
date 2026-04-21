@@ -33,13 +33,13 @@ export default function TechnologiesSection() {
               hidden: { opacity: 0, y: 18 },
               show: { opacity: 1, y: 0 },
             }}
-            className="glass-card tech-category-card rounded-2xl border border-white/10 p-5"
+            className="glass-card tech-category-card rounded-2xl border border-white/10 p-5 text-center sm:text-left"
           >
             <h3 className="font-display text-base font-semibold tracking-[-0.02em] text-white">
               {category}
             </h3>
 
-            <div className="tech-category-pills mt-4 flex flex-wrap gap-2.5">
+            <div className="tech-category-pills mt-4 flex flex-wrap justify-center gap-2.5 sm:justify-start">
               {items.map((tech) => {
                 const Icon = skillIcons[tech];
 

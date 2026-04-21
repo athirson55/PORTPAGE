@@ -26,7 +26,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="show"
           transition={{ staggerChildren: 0.15, delayChildren: 0.2 }}
-          className="hero-content relative z-10 max-w-4xl space-y-8"
+          className="hero-content relative z-10 mx-auto max-w-4xl space-y-8 text-center sm:text-left"
         >
           <motion.p
             variants={fadeInUp}
@@ -39,7 +39,7 @@ export default function HeroSection() {
           <motion.h1
             variants={fadeInUp}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="hero-title max-w-3xl font-display text-[2.05rem] font-semibold leading-[1.05] tracking-[-0.028em] text-white sm:text-5xl lg:text-7xl"
+            className="hero-title mx-auto max-w-3xl font-display text-[2.05rem] font-semibold leading-[1.05] tracking-[-0.028em] text-white sm:mx-0 sm:text-5xl lg:text-7xl"
           >
             Sou Athirson Silva, desenvolvedor Fullstack.
           </motion.h1>
@@ -55,7 +55,7 @@ export default function HeroSection() {
           <motion.p
             variants={fadeInUp}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="hero-copy max-w-2xl text-[0.98rem] leading-[1.72] tracking-[0.005em] text-slate-300/92 sm:text-lg sm:leading-[1.82]"
+            className="hero-copy mx-auto max-w-2xl text-[0.98rem] leading-[1.72] tracking-[0.005em] text-slate-300/92 sm:mx-0 sm:text-lg sm:leading-[1.82]"
           >
             Transformo ideias em experiências digitais funcionais, com foco em
             desenvolvimento web, clareza de produto e resolução de problemas.
@@ -64,7 +64,7 @@ export default function HeroSection() {
           <motion.div
             variants={fadeInUp}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="hero-actions flex flex-wrap gap-2.5 sm:gap-4"
+            className="hero-actions flex flex-wrap justify-center gap-2.5 sm:justify-start sm:gap-4"
           >
             <a
               href="#projects"

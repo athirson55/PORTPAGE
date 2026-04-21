@@ -54,7 +54,7 @@ export default function AboutSection() {
               }}
               whileHover={{ y: -4, scale: 1.01 }}
               transition={{ type: "spring", stiffness: 230, damping: 22 }}
-              className="glass-card skill-card group flex min-h-[122px] items-center gap-4 rounded-[1.35rem] border border-white/10 p-5 shadow-[0_8px_24px_rgba(0,0,0,0.22)]"
+              className="glass-card skill-card group flex min-h-[122px] flex-col items-center gap-4 rounded-[1.35rem] border border-white/10 p-5 text-center shadow-[0_8px_24px_rgba(0,0,0,0.22)] sm:flex-row sm:text-left"
             >
               <span className="skill-icon inline-flex h-11 w-11 items-center justify-center rounded-[0.95rem] border border-white/10 bg-white/7 text-slate-200 transition-transform duration-300 group-hover:scale-105">
                 <Icon size={18} />
