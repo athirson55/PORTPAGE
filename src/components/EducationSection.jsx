@@ -39,8 +39,8 @@ export default function EducationSection() {
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-50" />
             <div className="pointer-events-none absolute -right-24 -top-24 h-52 w-52 rounded-full bg-white/5 blur-3xl" />
 
-            <div className="relative z-10 text-center sm:text-left">
-              <div className="education-card-top flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+            <div className="relative z-10">
+              <div className="education-card-top flex flex-col items-start gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                 <div className="flex-1">
                   <h3 className="font-display text-lg font-semibold tracking-[-0.02em] text-white">
                     {edu.course}
