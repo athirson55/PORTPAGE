@@ -561,6 +561,35 @@ section[id] {
   }
 }
 
+@media (min-width: 769px) {
+  .hero-content,
+  .section-title-block,
+  .project-card,
+  .tech-category-card,
+  .education-card-top,
+  .contact-social-card {
+    text-align: left !important;
+  }
+
+  .hero-content,
+  .section-title-block,
+  .hero-title,
+  .hero-copy,
+  .section-title-subtitle,
+  .project-card p,
+  .project-cta {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .hero-actions,
+  .project-card .project-meta,
+  .tech-category-pills,
+  .education-card-date {
+    justify-content: flex-start !important;
+  }
+}
+
 @media (max-width: 390px) {
   .content-wrap {
     padding-inline: 1rem;
