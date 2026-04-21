@@ -6,6 +6,9 @@ import { FaLinkedin } from "react-icons/fa";
 import SectionTitle from "./SectionTitle";
 
 export default function ContactSection() {
+  const apiBaseUrl =
+    import.meta.env.VITE_API_URL?.replace(/\/$/, "") || "http://localhost:8787";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,7 +22,7 @@ export default function ContactSection() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const trimmedName = formData.name.trim();
@@ -38,24 +41,35 @@ export default function ContactSection() {
     setSubmitStatus({ type: "", message: "" });
 
     try {
-      const subject = encodeURIComponent(
-        `Contato do portfólio - ${trimmedName}`,
-      );
-      const body = encodeURIComponent(
-        `Nome: ${trimmedName}\nE-mail: ${trimmedEmail}\n\nMensagem:\n${trimmedMessage}`,
-      );
-      window.location.href = `mailto:athirsonsilva55@gmail.com?subject=${subject}&body=${body}`;
+      const response = await fetch(`${apiBaseUrl}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: trimmedName,
+          email: trimmedEmail,
+          message: trimmedMessage,
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(data?.message || "Falha ao enviar mensagem.");
+      }
 
       setSubmitStatus({
         type: "success",
-        message:
-          "Seu cliente de e-mail foi aberto. Se não abrir, use os links de contato ao lado.",
+        message: "Mensagem enviada com sucesso. Retorno em ate 24h uteis.",
       });
       setFormData({ name: "", email: "", message: "" });
-    } catch {
+    } catch (error) {
       setSubmitStatus({
         type: "error",
-        message: "Não foi possível abrir o cliente de e-mail. Tente novamente.",
+        message:
+          error.message ||
+          "Nao foi possivel enviar a mensagem. Tente novamente.",
       });
     } finally {
       setIsSubmitting(false);

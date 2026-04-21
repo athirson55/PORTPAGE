@@ -1,16 +1,57 @@
-# React + Vite
+# Portpage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio React + Vite com backend minimo para envio de formulario de contato.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js 18+
+- Conta de e-mail SMTP (exemplo: Gmail com senha de app)
 
-## React Compiler
+## Configuracao
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Crie o arquivo .env na raiz com base em .env.example.
+2. Preencha as variaveis SMTP e os e-mails de destino/remetente.
 
-## Expanding the ESLint configuration
+Variaveis principais:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- VITE_API_URL: URL publica da API de contato.
+- PORT: porta do backend local.
+- ALLOWED_ORIGIN: origem permitida para CORS (frontend).
+- SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS: acesso SMTP.
+- CONTACT_TO_EMAIL: e-mail que recebe as mensagens.
+- CONTACT_FROM_EMAIL: e-mail remetente.
+
+## Rodando localmente
+
+Terminal 1 (frontend):
+
+npm run dev:client
+
+Terminal 2 (backend):
+
+npm run dev:server
+
+Healthcheck da API:
+
+GET http://localhost:8787/api/health
+
+## Publicacao
+
+Como seu frontend esta em hosting estatico, publique o backend separadamente (Render, Railway, Fly.io ou outro).
+
+Depois disso:
+
+1. Defina VITE_API_URL para a URL publica da API (exemplo: https://sua-api.onrender.com).
+2. Faça novo build/deploy do frontend.
+
+## Endpoint
+
+- POST /api/contact
+
+Payload JSON:
+
+{
+"name": "Seu nome",
+"email": "voce@email.com",
+"message": "Mensagem"
+}
