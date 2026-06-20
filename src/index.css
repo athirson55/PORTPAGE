@@ -26,6 +26,14 @@ html {
   scroll-behavior: smooth;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.65);
+  outline-offset: 2px;
+}
+
 body {
   margin: 0;
   min-height: 100vh;

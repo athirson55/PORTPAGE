@@ -33,7 +33,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="hero-kicker font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-400/90 sm:text-sm sm:tracking-[0.3em]"
           >
-            Portfolio de Desenvolvedor
+            Portfólio para oportunidades em desenvolvimento
           </motion.p>
 
           <motion.h1
@@ -70,7 +70,7 @@ export default function HeroSection() {
               href="#projects"
               className="button-primary w-full justify-center sm:w-auto"
             >
-              Ver projetos
+              Ver projetos reais
             </a>
             <a
               href={`${import.meta.env.BASE_URL}curriculo-athirson-silva.pdf`}
@@ -78,7 +78,7 @@ export default function HeroSection() {
               rel="noreferrer"
               className="button-secondary w-full justify-center sm:w-auto"
             >
-              Baixar currículo
+              Baixar currículo (PDF)
             </a>
             <a
               href="#contact"

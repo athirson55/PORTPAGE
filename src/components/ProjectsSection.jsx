@@ -26,7 +26,7 @@ export default function ProjectsSection() {
         transition={{ staggerChildren: 0.12 }}
         className="grid gap-6 md:grid-cols-2 lg:gap-7"
       >
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <motion.article
             key={project.title}
             variants={{
@@ -46,7 +46,7 @@ export default function ProjectsSection() {
                   Projeto
                 </span>
                 <span className="text-xs uppercase tracking-[0.16em] text-slate-500">
-                  01
+                  {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
 

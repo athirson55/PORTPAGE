@@ -7,6 +7,7 @@ const navItems = [
   { label: "Sobre", href: "#about", id: "about" },
   { label: "Formação", href: "#education", id: "education" },
   { label: "Projetos", href: "#projects", id: "projects" },
+  { label: "Tecnologias", href: "#technologies", id: "technologies" },
   { label: "Contato", href: "#contact", id: "contact" },
 ];
 
@@ -62,7 +63,7 @@ export default function Header() {
       <div className="site-header-inner mx-auto flex w-full max-w-[1180px] items-center justify-between py-6 lg:py-7">
         <a
           href="#home"
-          className="font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-slate-100 transition-colors duration-300 hover:text-white"
+          className="font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-slate-100 transition-colors duration-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
         >
           Athirson Silva
         </a>
@@ -74,11 +75,12 @@ export default function Header() {
               <a
                 key={item.id}
                 href={item.href}
+                aria-current={isActive ? "page" : undefined}
                 className={`nav-link px-1 py-1 text-[0.83rem] font-medium transition-all duration-300 ${
                   isActive
                     ? "is-active text-white"
                     : "text-slate-300/90 hover:text-slate-100"
-                }`}
+                } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded-sm`}
               >
                 {item.label}
               </a>
@@ -113,7 +115,8 @@ export default function Header() {
                     key={item.id}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-200 transition-colors duration-300 hover:bg-white/7"
+                    aria-current={activeSection === item.id ? "page" : undefined}
+                    className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-200 transition-colors duration-300 hover:bg-white/7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                   >
                     {item.label}
                   </a>
