@@ -42,7 +42,7 @@ export const projects = [
       "Sistema web para gestão de frotas, com login e fluxo operacional para controle da operação.",
     link: "https://athirson55.github.io/SMART_FROTA02/#/login",
     buttonLabel: "Acessar sistema",
-    year: 2024,
+    year: 2026,
     role: "Desenvolvedor Fullstack",
     technologies: [
       "React",
