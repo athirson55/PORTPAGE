@@ -2,6 +2,7 @@ import "dotenv/config";
 import cors from "cors";
 import express from "express";
 import nodemailer from "nodemailer";
+import { appendFile } from "fs/promises";
 
 const app = express();
 
@@ -50,11 +51,38 @@ app.post("/api/contact", async (req, res) => {
     });
   }
 
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS || !CONTACT_TO_EMAIL) {
-    return res.status(500).json({
-      ok: false,
-      message: "Servidor de e-mail nao configurado.",
-    });
+  const smtpConfigured = Boolean(
+    SMTP_HOST && SMTP_USER && SMTP_PASS && CONTACT_TO_EMAIL,
+  );
+
+  // If SMTP is not configured, fallback to local log for development/testing
+  if (!smtpConfigured) {
+    try {
+      const entry = {
+        timestamp: new Date().toISOString(),
+        name,
+        email,
+        message,
+        notes: "saved-locally-no-smtp",
+      };
+      await appendFile(
+        new URL("./contacts.log", import.meta.url),
+        JSON.stringify(entry) + "\n",
+        { encoding: "utf8" },
+      );
+
+      return res.status(200).json({
+        ok: true,
+        message:
+          "Mensagem salva localmente (SMTP não configurado). Em produção configure SMTP para enviar e-mails.",
+      });
+    } catch (err) {
+      return res.status(500).json({
+        ok: false,
+        message:
+          "Falha ao salvar mensagem localmente. Tente novamente mais tarde.",
+      });
+    }
   }
 
   const transporter = nodemailer.createTransport({
