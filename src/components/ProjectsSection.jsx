@@ -15,7 +15,7 @@ export default function ProjectsSection() {
     >
       <SectionTitle
         eyebrow="Projetos"
-        title="Projetos em destaque"
+        title="Projetos"
         subtitle="Uma seleção de projetos com foco em resolução prática de problemas, pensamento sistêmico e implementação de software."
       />
 

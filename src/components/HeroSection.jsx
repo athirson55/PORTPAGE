@@ -70,7 +70,7 @@ export default function HeroSection() {
               href="#projects"
               className="button-primary w-full justify-center sm:w-auto"
             >
-              Ver projetos reais
+              Projetos
             </a>
             <a
               href={`${import.meta.env.BASE_URL}curriculo-athirson-silva.pdf`}

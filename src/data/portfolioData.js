@@ -37,16 +37,10 @@ export const education = [
 
 export const projects = [
   {
-    title: "Smart Frota 02",
+    title: "Smart Frota",
     description:
       "Sistema web para gestão de frotas, com login e fluxo operacional para controle da operação.",
     link: "https://athirson55.github.io/SMART_FROTA02/#/login",
     buttonLabel: "Acessar sistema",
-  },
-  {
-    title: "Projeto DNS",
-    description: "Configuração e implementação de DNS com site publicado.",
-    link: "https://redestde3.netlify.app",
-    buttonLabel: "Ver projeto",
   },
 ];

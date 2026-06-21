@@ -16,7 +16,7 @@ export default function TechnologiesSection() {
       <SectionTitle
         eyebrow="Tecnologias"
         title="Stack que eu utilizo"
-        subtitle="Tecnologias que aplico em projetos acadêmicos e pessoais, com foco em desenvolvimento web fullstack para vagas de estágio e júnior."
+        subtitle="Tecnologias que aplico em projetos acadêmicos e pessoais, com foco em desenvolvimento web."
       />
 
       <motion.div
