@@ -1,19 +1,27 @@
 export const skills = [
-  "HTML",
-  "CSS",
+  "C",
+  "Python",
   "JavaScript",
+  "TypeScript",
+  "PHP",
   "React",
   "Node.js",
-  "Python",
-  "C",
   "Git",
 ];
 
 export const technologiesByCategory = {
-  "Front-end": ["HTML", "CSS", "JavaScript", "React"],
-  "Back-end": ["Node.js", "Python", "PHP", "C"],
-  Design: ["UX/UI Design", "Figma"],
-  Ferramentas: ["Git"],
+  "Linguagens de Programação": [
+    "C",
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "PHP",
+  ],
+  "Front-End": ["HTML5", "CSS3", "React", "React Router", "Vite"],
+  "Back-End": ["Node.js", "PHP", "Python"],
+  "Banco de Dados": ["PostgreSQL", "SQLite"],
+  "Ferramentas e Versionamento": ["Git", "GitHub", "GitHub Pages"],
+  "Design e Prototipação": ["Figma"],
 };
 
 export const education = [
@@ -29,28 +37,16 @@ export const education = [
 
 export const projects = [
   {
+    title: "Smart Frota 02",
+    description:
+      "Sistema web para gestão de frotas, com login e fluxo operacional para controle da operação.",
+    link: "https://athirson55.github.io/SMART_FROTA02/#/login",
+    buttonLabel: "Acessar sistema",
+  },
+  {
     title: "Projeto DNS",
     description: "Configuração e implementação de DNS com site publicado.",
     link: "https://redestde3.netlify.app",
     buttonLabel: "Ver projeto",
-  },
-  {
-    title: "Projeto Integrador",
-    description:
-      "Planejamento completo do sistema, análise de requisitos e implementação.",
-    link: "#",
-    buttonLabel: "GitHub",
-  },
-  {
-    title: "Calculadora em C",
-    description: "Calculadora em terminal usando lógica de programação.",
-    link: "#",
-    buttonLabel: "GitHub",
-  },
-  {
-    title: "Sistema Web",
-    description: "Sistema CRUD básico com frontend e backend.",
-    link: "#",
-    buttonLabel: "GitHub",
   },
 ];

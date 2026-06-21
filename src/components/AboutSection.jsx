@@ -4,15 +4,15 @@ import { skills } from "../data/portfolioData";
 import { skillIcons } from "../data/skillIcons";
 
 const skillDetails = {
-  HTML: { note: "Estrutura semântica e acessível" },
-  CSS: { note: "Layout responsivo e refinamento visual" },
+  C: { note: "Base sólida em lógica e estruturas" },
+  Python: { note: "Automação e integração de sistemas" },
   JavaScript: {
     note: "Lógica, interatividade e manipulação de estado",
   },
+  TypeScript: { note: "Código escalável com tipagem estática" },
+  PHP: { note: "APIs e serviços de backend" },
   React: { note: "Componentização e fluxo de interface" },
   "Node.js": { note: "Rotas, APIs e serviços backend" },
-  Python: { note: "Automação e fundamentos de backend" },
-  C: { note: "Base de lógica e estrutura de dados" },
   Git: { note: "Versionamento e fluxo de colaboração" },
 };
 
