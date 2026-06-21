@@ -72,14 +72,7 @@ export default function HeroSection() {
             >
               Projetos
             </a>
-            <a
-              href={`${import.meta.env.BASE_URL}curriculo-athirson-silva.pdf`}
-              target="_blank"
-              rel="noreferrer"
-              className="button-secondary w-full justify-center sm:w-auto"
-            >
-              Baixar currículo (PDF)
-            </a>
+            {/* Botão de currículo removido conforme solicitado */}
             <a
               href="#contact"
               className="button-secondary w-full justify-center sm:w-auto"
