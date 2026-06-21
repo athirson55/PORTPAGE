@@ -56,6 +56,23 @@ export default function ProjectsSection() {
               <p className="max-w-md text-sm leading-relaxed text-slate-300/85">
                 {project.description}
               </p>
+              {project.technologies && (
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-slate-200"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              )}
+              {project.role && (
+                <div className="mt-3 text-sm text-slate-400">
+                  {project.role} {project.year ? `• ${project.year}` : null}
+                </div>
+              )}
             </div>
 
             <a
